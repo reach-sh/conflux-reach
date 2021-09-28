@@ -6,8 +6,7 @@ RUN chmod +x /rustup.sh
 RUN /rustup.sh -y
 RUN /root/.cargo/bin/rustup install 1.47.0
 #RUN git clone https://github.com/Conflux-Chain/conflux-rust
-WORKDIR conflux-rust
-#RUN git checkout v1.1.0
+RUN git checkout v1.1.0-reach
 RUN /root/.cargo/bin/cargo build --release
 RUN cp ./target/release/conflux ./run/conflux
 
