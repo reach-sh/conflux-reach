@@ -83,10 +83,10 @@ pub fn load_secrets_file(
 
     let mut accounts: HashMap<Address, U256> = HashMap::new();
     let balance =
-        U256::from_dec_str("10000000000000000000000").map_err(|e| {
+        U256::from_dec_str("100000000000000000000000000").map_err(|e| {
             format!(
                 "failed to parse balance: value = {}, error = {:?}",
-                "10000000000000000000000", e
+                "100000000000000000000000000", e
             )
         })?;
     for line in buffered.lines() {
